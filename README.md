@@ -23,7 +23,7 @@ The repository contains some simple games written in Python (mainly using Pygame
 
 - BouncingBall  
   挡板弹球小游戏（破损不堪版），用挡板接住移动的小球，如果成功接住则会将小球弹走
-![alt text](Pictures\BouncingBall.png)
+![alt text](Pictures/BouncingBall.png)
 
 ## 食用指南
 
