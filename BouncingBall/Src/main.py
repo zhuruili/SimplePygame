@@ -31,7 +31,7 @@ font = pygame.font.Font(None, 60) # 设置字体
 ball = pygame.image.load("BouncingBall/Assets/ball.png").convert_alpha() # 加载小球图片
 ball = pygame.transform.scale(ball, (62, 62)) # 缩放小球图片
 ball_pos, ball_w, ball_h = Vector2(100, 0), 62, 62 # 小球位置和大小
-speed = Vector2(0.5, 0.5)
+speed = Vector2(3, 3)
 platform = pygame.Surface((126, 26)) # 创建挡板
 platform.fill((0, 0, 0)) # 填充黑色
 platform_pos, platform_w, platform_h = Vector2(WIDTH//2, HEIGHT-26), 126, 26 # 挡板位置和大小

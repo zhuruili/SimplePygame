@@ -25,8 +25,11 @@ The repository contains some simple games written in Python (mainly using Pygame
   挡板弹球小游戏（破损不堪版），用挡板接住移动的小球，如果成功接住则会将小球弹走
 
 <p align="center">
-  <img src="Pictures/BouncingBall.png" alt="Bouncing Ball" width="280"/>
+  <img src="Pictures/BouncingBall.png" alt="Bouncing Ball" width="300"/>
 </p>
+
+- FlappyBird  
+  简易版Flappy Bird小游戏，相信很多人都玩过。点一下小鸟跳一下，不点的时候小鸟会往下掉，穿越管道可以得分
 
 ## 食用指南
 
