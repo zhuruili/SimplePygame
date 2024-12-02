@@ -29,7 +29,11 @@ The repository contains some simple games written in Python (mainly using Pygame
 </p>
 
 - FlappyBird  
-  简易版Flappy Bird小游戏，相信很多人都玩过。点一下小鸟跳一下，不点的时候小鸟会往下掉，穿越管道可以得分
+  简易版Flappy Bird小游戏，相信很多人都玩过。点一下小鸟跳一下，不点的时候小鸟会往下掉，穿越管道可以得分，代码只实现了主要的游戏逻辑，非常简陋但容易理解
+
+<p align="center">
+  <img src="Pictures/FlappyBird.png" alt="Flappy Bird" width="300"/>
+</p>
 
 ## 食用指南
 
@@ -37,3 +41,5 @@ The repository contains some simple games written in Python (mainly using Pygame
 
 - BouncingBall  
   运行文件夹下的Src/main.py即可开始游戏，按键<-,->控制挡板移动，如果运行失败可以检查一下加载小球图片的文件路径
+- FlappyBird  
+  同上，按键或者鼠标点击可以控制小鸟跳跃，不过代码仅含基础逻辑，如有需要可自行扩展

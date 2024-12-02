@@ -23,6 +23,8 @@ class Bird(object):
     def birdUpdate(self):
         if self.jump:
             self.jumpSpeed -= 1 # 速度递减，上升越来越慢
+            if self.jumpSpeed < 0:
+                self.jump = False
             self.birdY -= self.jumpSpeed # 鸟的Y坐标减小，鸟上升
         else:
             if self.gravity < 7:
@@ -71,6 +73,32 @@ def createMap():
 
     pygame.display.update()
 
+def checkDead():
+    """检测小鸟是否死亡"""
+    # 判断小鸟是否碰到地面
+    if bird.birdRect[1] == 920:
+        bird.dead = True
+    # 判断小鸟是否撞到管道
+    upRect = pygame.Rect(pipeline.wallx-98, -320, 98, 495)  # 这两行的参数设置有BUG，但是不影响游戏整体逻辑
+    downRect = pygame.Rect(pipeline.wallx-98, 350, 98, 495)
+    if upRect.colliderect(bird.birdRect) or downRect.colliderect(bird.birdRect):
+        bird.dead = True
+    return bird.dead
+
+def getResult():
+    """如果游戏结束"""
+    final_text1 = "Game Over"
+    final_text2 = "Your final score is:  " + str(score)
+    ft1_font = pygame.font.SysFont(None, 70)
+    ft1_surf = font.render(final_text1, 1, (242, 3, 36))
+    ft2_font = pygame.font.SysFont(None, 50)
+    ft2_surf = font.render(final_text2, 1, (253, 177, 6))
+
+    screen.blit(ft1_surf, [screen.get_width() / 2 - ft1_surf.get_width() / 2, 100])
+    screen.blit(ft2_surf, [screen.get_width() / 2 - ft2_surf.get_width() / 2, 200])
+
+    pygame.display.flip()
+
 
 if __name__ == '__main__':
     """主程序"""
@@ -97,11 +125,14 @@ if __name__ == '__main__':
             if (event.type == pygame.KEYDOWN or event.type == pygame.MOUSEBUTTONDOWN) and not bird.dead:
                 bird.jump = True # 按键盘或者鼠标点击时，小鸟往上飞
                 bird.gravity = 3.5
-                bird.jumpSpeed = 12
+                bird.jumpSpeed = 12 # 每次触发跳跃将跳跃速度恢复到12，不然会继承之前衰减过的速度
 
         background = pygame.image.load("FlappyBird\Assets\\background.jpg") # 加载背景图片
         background = pygame.transform.scale(background,(1916*0.5,920*0.5))
 
-        createMap() # 绘制地图
+        if checkDead():
+            getResult() # 游戏结束
+        else:
+            createMap() # 绘制地图
 
     pygame.quit()
