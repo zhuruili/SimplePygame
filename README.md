@@ -42,6 +42,13 @@ The repository contains some simple games written in Python (mainly using Pygame
   <img src="Pictures\MarieAdventure.png" alt="Marie Adventure" width="350"/>
 </p>
 
+- PushBox  
+  推箱子小游戏，并且配备撤回和闯关系统
+
+<p align="center">
+  <img src="Pictures\PushBox.png" alt="Marie Adventure" width="300"/>
+</p>
+
 ## 食用指南
 
 各个小游戏文件夹对应的使用方法与一些注意事项
@@ -52,9 +59,11 @@ The repository contains some simple games written in Python (mainly using Pygame
   同上，按键或者鼠标点击可以控制小鸟跳跃，不过代码仅含基础逻辑，如有需要可自行扩展
 - MarieAdventure  
   空格跳跃躲避地上的管道和飞来的导弹，并且配置了音效与音乐
+- PushBox  
+  运行此项目请以PushBox文件夹为根目录打开工作区，随后运行其下的manage.py文件即可
 
 > [!Important]
-> 本仓库中的所有小游戏代码中的文件路径都是以SimplePygame为根目录的，所以你如果单独打开某个游戏文件夹为工作区直接运行的话会报错，如有需要可以自行修改文件路径或者直接从根目录SimplePygame打开工作区
+> 本仓库中的部分小游戏代码中的文件路径是以SimplePygame为根目录的，另一部分是以小游戏文件夹本身为根目录，所以如果单独打开某个游戏文件夹为工作区直接运行报错的话，可以自行修改文件路径或者尝试从根目录SimplePygame打开工作区
 
 ### 参考书目
 
