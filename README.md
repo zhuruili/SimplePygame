@@ -49,6 +49,13 @@ The repository contains some simple games written in Python (mainly using Pygame
   <img src="Pictures\PushBox.png" alt="Marie Adventure" width="300"/>
 </p>
 
+- AirplaneWars  
+  飞机大战小游戏，战机会自动射击，控制战机移动击落敌机，并配置了得分与排行榜系统
+
+<p align="center">
+  <img src="Pictures\AirplaneWars.png" alt="Marie Adventure" width="350"/>
+</p>
+
 ## 食用指南
 
 各个小游戏文件夹对应的使用方法与一些注意事项
@@ -61,9 +68,11 @@ The repository contains some simple games written in Python (mainly using Pygame
   空格跳跃躲避地上的管道和飞来的导弹，并且配置了音效与音乐
 - PushBox  
   运行此项目请以PushBox文件夹为根目录打开工作区，随后运行其下的manage.py文件即可
+- AirplaneWars  
+  运行此项目请以AirplaneWars文件夹为根目录打开工作区，随后运行其下的main.py文件即可
 
 > [!Important]
-> 本仓库中的部分小游戏代码中的文件路径是以SimplePygame为根目录的，另一部分是以小游戏文件夹本身为根目录，所以如果单独打开某个游戏文件夹为工作区直接运行报错的话，可以自行修改文件路径或者尝试从根目录SimplePygame打开工作区
+> 本仓库中的部分小游戏代码中的文件路径是以SimplePygame为根目录的，另一部分是以小游戏文件夹本身为根目录（主要是因为不同项目的复杂程度不同），所以如果单独打开某个游戏文件夹为工作区直接运行发现报错的话，可以自行修改文件路径或者尝试从根目录SimplePygame打开工作区
 
 ### 参考书目
 
